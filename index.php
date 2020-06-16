@@ -7,7 +7,8 @@
         <?php
         $filename = "/var/www/html/domain_name.txt" ;
         $file = fopen( $filename , "r");
-        $domain_name = fread($file ,29);
+        $filesize = filesize( "domain_name.txt" );
+        $domain_name = fread($file , $filesize);
         fclose( $file );
         echo   "<h1>WELCOME !!</h1>";
         echo   "<h2>This is Rupali Gurjar</h2>";
